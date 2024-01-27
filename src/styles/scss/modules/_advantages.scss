@@ -1,0 +1,212 @@
+@use "../variables.scss" as *;
+
+#advantages {
+  background-color: $background;
+
+  .wrapper {
+    padding: 100px 50px;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 50px;
+
+      .nav {
+        margin-bottom: 30px;
+      }
+
+      .h2 {
+        text-align: center;
+        max-width: 800px;
+      }
+    }
+
+    .advs {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 100%;
+
+      .adv {
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        max-width: 320px;
+
+        img {
+          max-width: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        .container {
+          padding: 24px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        h3,
+        span,
+        h4 {
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+
+        &.visitors {
+          background-color: #515765;
+          color: $w;
+          max-height: 420px;
+          height: 100%;
+
+          img {
+            // transform: translateY(4px);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+          }
+
+          h3 {
+            font-size: 28px;
+            span {
+              font-size: 36px;
+            }
+          }
+        }
+
+        h4 {
+          font-size: 20px;
+          font-weight: 500;
+          max-width: 260px;
+        }
+
+        &.ranking {
+          background-color: $w;
+          padding: 24px;
+
+          .rank {
+            margin-bottom: 24px;
+          }
+
+          h4 {
+            margin-bottom: 5px;
+          }
+        }
+
+        &.rate {
+          background-color: $blue;
+          color: $w;
+          max-height: 420px;
+          height: 100%;
+
+          .rimg {
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 320px;
+            height: 230px;
+          }
+
+          .container {
+            padding: 24px 24px 0;
+
+            h4 {
+              max-width: 220px;
+            }
+          }
+        }
+
+        &.lead {
+          background-color: $w;
+          color: $dark;
+          max-width: 320px;
+          width: 100%;
+          padding: 24px 0 0 0;
+
+          .international {
+            height: 180px;
+          }
+
+          .container {
+            h4 {
+              max-width: 200px;
+            }
+          }
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: 300;
+          max-width: 270px;
+        }
+      }
+    }
+
+    @media (max-width: $notebooks) {
+      padding: 50px 25px;
+
+      .text {
+        .h2 {
+          max-width: 600px;
+        }
+      }
+    }
+
+    @media (max-width: $tablet) {
+      .text {
+        margin-bottom: 25px;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      padding: 20px 10px;
+
+      .text {
+        margin-bottom: 25px;
+
+        .nav {
+          margin-bottom: 15px;
+        }
+      }
+
+      .advs {
+        .adv {
+          &.visitors {
+            .container {
+              padding: 20px;
+              h3 {
+                font-size: 20px;
+
+                span {
+                  font-size: 28px;
+                }
+              }
+            }
+          }
+
+          &.rate {
+            .container {
+              padding: 20px 20px 0;
+            }
+          }
+
+          &.lead {
+            .container {
+              padding: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

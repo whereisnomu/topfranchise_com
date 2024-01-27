@@ -1,0 +1,281 @@
+@use "../variables.scss" as *;
+
+#why {
+  background-color: $background;
+
+  .wrapper {
+    padding: 60px;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $backlightblue;
+    border-radius: 40px;
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 50px;
+
+      .nav {
+        margin-bottom: 30px;
+      }
+
+      .h2 {
+        text-align: center;
+        max-width: 660px;
+      }
+    }
+
+    .prove {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+
+      .our,
+      .other {
+        &.default {
+          border: 1px solid $w;
+          border-radius: 20px;
+          padding: 30px;
+
+          h3 {
+            font-weight: 500;
+            font-size: 24px;
+            color: $dark;
+            margin-bottom: 24px;
+            text-align: left;
+            text-transform: uppercase;
+          }
+
+          .marks {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 14px;
+
+            color: $grey;
+            font-size: 18px;
+            font-weight: 400;
+
+            .mark {
+              max-width: 525px;
+
+              h4 {
+                font-size: 18px;
+                font-weight: 400;
+
+                span {
+                  color: $orange;
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .our {
+        background-color: $w;
+      }
+    }
+
+    .smallcta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $w;
+      padding: 20px;
+      border-radius: 20px;
+      max-width: 1193px;
+      width: 100%;
+
+      .l {
+        display: flex;
+        gap: 20px;
+
+        h4 {
+          font-size: 18px;
+          font-weight: 500;
+          color: $dark;
+          text-align: left;
+          align-self: center;
+          max-width: 270px;
+        }
+      }
+
+      .r {
+        display: flex;
+        gap: 20px;
+
+        small {
+          font-size: 16px;
+          font-weight: 300;
+          color: $dark;
+          text-align: right;
+          align-self: center;
+          max-width: 350px;
+        }
+
+        .button {
+          max-width: 250px;
+          color: $w;
+        }
+      }
+    }
+
+    @media (max-width: $lscreen) {
+      .smallcta {
+        .l {
+          gap: 10px;
+
+          img {
+            max-width: 200px;
+          }
+
+          h4 {
+            font-size: 15px;
+          }
+        }
+
+        .r {
+          gap: 10px;
+
+          small {
+            font-size: 14px;
+            max-width: 280px;
+          }
+
+          .button {
+            max-width: 185px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: $notebooks) {
+      padding: 30px;
+
+      .text {
+        .h2 {
+          max-width: 500px;
+        }
+      }
+
+      .smallcta {
+        flex-direction: column;
+        max-width: 586px;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      border-radius: 20px;
+
+      .text {
+        margin-bottom: 25px;
+      }
+
+      .prove {
+        .our,
+        .other {
+          &.default {
+            padding: 20px;
+            max-width: unset;
+            width: 100%;
+
+            .marks {
+              .mark {
+                gap: 10px;
+
+                h4 {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .smallcta {
+        padding: 10px;
+        max-width: unset;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      padding: 20px 10px;
+
+      .text {
+        margin-bottom: 25px;
+
+        .nav {
+          margin-bottom: 15px;
+        }
+      }
+
+      .prove {
+        .our,
+        .other {
+          &.default {
+            padding: 10px;
+
+            h3 {
+              font-size: 22px;
+              margin-bottom: 12px;
+            }
+
+            .marks {
+              .mark {
+                img {
+                  width: 22px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .smallcta {
+        .l {
+          flex-direction: column-reverse;
+          align-items: flex-start;
+        }
+
+        .r {
+          flex-direction: column;
+          small {
+            text-align: left;
+          }
+
+          .button {
+            max-width: unset;
+            width: 100%;
+            padding: 12px 24px;
+          }
+        }
+
+        .l,
+        .r {
+          h4,
+          small {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 350px) {
+      .smallcta {
+        align-items: baseline;
+      }
+    }
+  }
+}

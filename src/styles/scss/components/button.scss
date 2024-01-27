@@ -1,0 +1,30 @@
+@import "../variables.scss";
+
+.button {
+  padding: 16px 24px;
+  border-radius: 40px;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+
+  &.transparent {
+    border: 1px solid $blue;
+    background-color: transparent;
+
+    a {
+      color: $blue;
+    }
+  }
+
+  &.blue {
+    background-color: $blue;
+  }
+
+  &.green {
+    background-color: $green;
+  }
+
+  &.orange {
+    background-color: $orange;
+  }
+}
