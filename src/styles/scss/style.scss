@@ -56,8 +56,14 @@ body {
 
   a {
     text-decoration: none;
-    color: #fff;
+    color: $w;
     cursor: pointer;
+
+    &.link {
+      color: $orange;
+      cursor: pointer;
+      text-decoration: underline;
+    }
   }
 
   .h2 {

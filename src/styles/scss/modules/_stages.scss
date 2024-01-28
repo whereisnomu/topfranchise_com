@@ -1,2 +1,305 @@
+@use "../variables.scss" as *;
+
 #stages {
+  background-color: $background;
+
+  .wrapper {
+    padding: 100px 50px;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    gap: 60px;
+    justify-content: space-between;
+
+    .left {
+      .text {
+        margin-bottom: 80px;
+
+        .nav {
+          max-width: 200px;
+          text-align: center;
+          margin-bottom: 30px;
+        }
+
+        .h2 {
+          max-width: 380px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          max-width: 605px;
+          color: $grey;
+          font-size: 18px;
+          font-weight: 400;
+          margin-bottom: 40px;
+        }
+
+        .button {
+          max-width: 320px;
+        }
+      }
+
+      .map {
+        img {
+          object-fit: contain;
+          width: 100%;
+          max-width: 630px;
+          height: 308px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          max-width: 605px;
+          color: $grey;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 140%;
+        }
+      }
+    }
+
+    .right {
+      .steps {
+        .step {
+          display: flex;
+          gap: 30px;
+          align-items: center;
+
+          padding: 30px 0;
+          border-top: 1px solid $bordergrey;
+
+          &.border {
+            border-bottom: 1px solid $bordergrey;
+          }
+
+          &__img {
+            border-radius: 20px;
+            max-width: 300px;
+            max-height: 240px;
+            object-fit: contain;
+            width: 100%;
+          }
+
+          &:first-child {
+            .info {
+              h4 {
+                max-width: 250px;
+              }
+            }
+          }
+
+          .info {
+            display: flex;
+            flex-direction: column;
+
+            gap: 12px;
+
+            h3 {
+              font-size: 22px;
+              font-weight: 500;
+              color: $dark;
+            }
+
+            h4 {
+              font-weight: 400;
+              font-size: 18px;
+              color: $grey;
+              max-width: 300px;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: $sxga) {
+      .right {
+        .steps {
+          .step {
+            &__img {
+              border-radius: 20px;
+              max-width: 280px;
+              max-height: 220px;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: $lscreen) {
+      gap: 30px;
+
+      .left {
+        .text {
+          margin-bottom: 0;
+
+          .nav {
+            margin-bottom: 20px;
+          }
+
+          p {
+            font-size: 16px;
+            margin-bottom: 20px;
+          }
+
+          .button {
+            max-width: 300px;
+            padding: 12px 20px;
+          }
+        }
+
+        .map {
+          img {
+            margin-bottom: 0;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .right {
+        .steps {
+          .step {
+            &__img {
+              max-width: 220px;
+              max-height: 175px;
+            }
+
+            .info {
+              h3 {
+                font-size: 20px;
+              }
+
+              h4 {
+                max-width: 390px;
+              }
+
+              h4,
+              a {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: $notebooks) {
+      padding: 50px 25px;
+
+      flex-direction: column;
+
+      .left {
+        .text {
+          margin-bottom: 40px;
+
+          .h2 {
+            max-width: 600px;
+          }
+
+          p {
+            font-size: 18px;
+          }
+        }
+
+        .map {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .right {
+        .steps {
+          .step {
+            .info {
+              h3 {
+                font-size: 22px;
+              }
+
+              h4 {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: $tablet) {
+      .left {
+        .text {
+          p {
+            font-size: 16px;
+          }
+        }
+
+        .map {
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .right {
+        .steps {
+          .step {
+            .info {
+              h3 {
+                font-size: 20px;
+              }
+
+              h4 {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: $mobile) {
+      padding: 20px 10px;
+
+      .left {
+        .text {
+          margin-bottom: 20px;
+
+          .nav {
+            margin-bottom: 15px;
+          }
+        }
+      }
+
+      .right {
+        .steps {
+          .step {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+
+            &__img {
+              max-width: 300px;
+              max-height: 250px;
+            }
+
+            .info {
+              h3 {
+                font-size: 22px;
+              }
+
+              h4,
+              a {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
