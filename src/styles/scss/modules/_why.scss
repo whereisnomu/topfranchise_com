@@ -225,7 +225,7 @@
         .our,
         .other {
           &.default {
-            padding: 10px;
+            padding: 16px 20px;
 
             h3 {
               font-size: 22px;
@@ -244,6 +244,7 @@
       }
 
       .smallcta {
+        padding: 20px 18px;
         .l {
           flex-direction: column-reverse;
           align-items: flex-start;

@@ -16,6 +16,7 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
+      max-width: 1341px;
 
       margin-bottom: 50px;
 
@@ -133,8 +134,14 @@
       }
 
       .clients {
-        grid-template-columns: 300px;
-        grid-template-rows: repeat(6, 200px);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+        .client {
+          img {
+            max-height: 70px;
+          }
+        }
       }
     }
   }
